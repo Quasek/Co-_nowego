@@ -1,19 +1,3 @@
-#Napisać klasę BazaDanychPracowników
-# Można dodać, usunac pracownika, zmienic jego imie, nazwisko, adres, telefon, wypłąte
-# Znaleźć pracownika po takiej danej
-# Znaleźć X najlepiej zarabiajacych pracownikó
-# Wypisac pracownikow spelniajacych jakies kryteria
-# Zapisać stan bazy do pliku i wczytać z pliku
-
-def znajdz_czlon(tekst, dozwolone_znaki):
-    czlon = []
-    for znak in tekst:
-        if znak in dozwolone_znaki:
-            czlon.append(znak)
-            continue
-        break
-    return ''.join(czlon)
-        
 def znajdz_czlon(tekst, dozwolone_znaki):
     czlon = []
     for znak in tekst:
@@ -32,7 +16,7 @@ def zamiana_na_arabskie(liczba):
     dziesiatki = znajdz_czlon(liczba, ["X", "C", "L"])
     liczba = liczba[len(dziesiatki):]
     cyfry = znajdz_czlon(liczba, ["V", "X", "I"])
-    pozostałe_liczby = liczba[len(cyfry):]
+    pozostale_liczby = liczba[len(cyfry):]
 
 
     rzymskie_na_arabskie = {"": 0, "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, \
@@ -40,7 +24,7 @@ def zamiana_na_arabskie(liczba):
                             "C": 100, "CC": 200, "CCC": 300, "CD": 400, "D": 500, "DC": 600, "DCC": 700, "DCCC": 800,
                             "CM": 900, "M": 1000, "MM": 2000, "MMM": 3000}
 
-    if pozostałe_liczby != "":
+    if pozostale_liczby != "":
         return "Taka liczba nie istnieje!"
 
     else:
