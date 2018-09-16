@@ -1,6 +1,3 @@
-liczba = input("Podaj liczbę rzymską mniejszą od MMM: ")
-liczba = liczba.upper()
-
 #Napisać klasę BazaDanychPracowników
 # Można dodać, usunac pracownika, zmienic jego imie, nazwisko, adres, telefon, wypłąte
 # Znaleźć pracownika po takiej danej
@@ -49,9 +46,7 @@ def zamiana_na_arabskie(liczba):
     else:
         return rzymskie_na_arabskie[tysiace] + rzymskie_na_arabskie[setki] + rzymskie_na_arabskie[dziesiatki] + \
            rzymskie_na_arabskie[cyfry]
-
-
-print(zamiana_na_arabskie(liczba)) 
+ 
 import unittest
 
 class TestujKonwersjeArabskichNaRzymskie(unittest.TestCase):
